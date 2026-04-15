@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#2790B1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="❇️ SokoGarden ❇️"
+        android:fontFamily="cursive"
+        android:textSize="42sp"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        android:textColor="#4E3C0436"
+        android:padding="12dp"
+        android:background="@drawable/shape"/>
+
+    <!--    below is a linear layout that aligns content horizontally-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤 SignUp"
+            android:textStyle="italic"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="#000"
+            android:layout_marginTop="8dp"
+            android:id="@+id/signupbtn"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👮 SignIn"
+            android:textStyle="italic"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="#000"
+            android:layout_marginTop="8dp"
+            android:id="@+id/signinbtn" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F8073C"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+
+
+
+    </LinearLayout>
+
+    <!--    below is our progress bar-->
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"/>
+
+    <!--    below is our recycler view-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/single_item" />
+
+</LinearLayout>
