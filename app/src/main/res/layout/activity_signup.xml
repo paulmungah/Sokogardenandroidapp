@@ -8,26 +8,27 @@
     android:layout_height="match_parent"
     tools:context=".Signup"
     android:orientation="vertical"
-    android:background="#DD353E80">
+    android:background="#0F172A">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="✨ Create Account "
-        android:textSize="47sp"
-        android:fontFamily="cursive"
+        android:text="CREATE ACCOUNT"
+        android:textSize="40sp"
+        android:fontFamily="sans-serif-medium"
         android:textAlignment="center"
-        android:textStyle="italic|bold"
-        android:textColor="#4E0436"
-        android:padding="12dp"
-        android:background="@drawable/shape"/>
+        android:textStyle="bold"
+        android:textColor="#E2E8F0"
+        android:padding="16dp"
+        android:background="#1E293B"/>
 
-    <!--      Below is a card view-->
+    <!-- Card View -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="6dp"
         app:cardElevation="10dp"
+        app:cardBackgroundColor="#111827"
         android:layout_margin="12dp"
         android:padding="10dp">
 
@@ -37,95 +38,93 @@
             android:orientation="vertical"
             android:padding="12dp">
 
-
-
-            <!--            bellow is the edit text for username-->
+            <!-- Username -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="👤 Enter your Username"
-                android:textColorHint="#000"
-                android:textSize="20sp"
-                android:textColor="#070707"
+                android:hint="Enter Username"
+                android:textColorHint="#9CA3AF"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif"
                 android:id="@+id/username"
                 android:layout_margin="8dp"
-                android:background="#F5FFF5"
-                android:padding="7dp"/>
+                android:background="#1F2937"
+                android:padding="10dp"/>
 
-            <!--            bellow is the edit text for email-->
+            <!-- Email -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="📧 Enter your Email Address"
-                android:textColorHint="#000"
-                android:textSize="20sp"
-                android:textColor="#070707"
+                android:hint="Enter Email Address"
+                android:textColorHint="#9CA3AF"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
                 android:inputType="textEmailAddress"
                 android:fontFamily="sans-serif"
                 android:id="@+id/email"
                 android:layout_margin="8dp"
-                android:background="#F5FFF5"
-                android:padding="7dp"/>
+                android:background="#1F2937"
+                android:padding="10dp"/>
 
-            <!--            bellow is the edit text for password-->
+            <!-- Password -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="🔑 Enter your password"
-                android:textColorHint="#000"
-                android:textSize="20sp"
-                android:textColor="#070707"
+                android:hint="Enter Password"
+                android:textColorHint="#9CA3AF"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif"
                 android:id="@+id/password"
                 android:inputType="textPassword"
                 android:layout_margin="8dp"
-                android:background="#F5FFF5"
-                android:padding="7dp"/>
+                android:background="#1F2937"
+                android:padding="10dp"/>
 
-            <!--            bellow is the edit text for phone number-->
+            <!-- Phone -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="📞 Enter your phone number"
-                android:textColorHint="#000"
-                android:textSize="20sp"
-                android:textColor="#070707"
+                android:hint="Enter Phone Number"
+                android:textColorHint="#9CA3AF"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
                 android:fontFamily="sans-serif"
                 android:id="@+id/phone"
-                android:inputType="number"
+                android:inputType="phone"
                 android:layout_margin="8dp"
-                android:background="#F5FFF5"
-                android:padding="7dp"/>
+                android:background="#1F2937"
+                android:padding="10dp"/>
 
-            <!--            below is the sign up button -->
+            <!-- Button -->
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="✨ Sign Up ✨"
-                android:textStyle="italic"
-                android:textSize="25sp"
-                android:padding="10dp"
+                android:text="SIGN UP"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:padding="12dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:backgroundTint="#FF6EC7"
-                android:textColor="#000"
+                android:backgroundTint="#2563EB"
+                android:textColor="#FFFFFF"
                 android:layout_marginTop="22dp"
                 android:id="@+id/signupbtn"/>
 
+            <!-- Sign in -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Already have an account? Signin"
+                android:text="Already have an account? Sign in"
                 android:textAlignment="center"
-                android:textColor="#26159d"
-                android:textSize="23sp"
+                android:textColor="#9CA3AF"
+                android:textSize="18sp"
                 android:layout_marginTop="12dp"
                 android:id="@+id/signintxt"
-                android:fontFamily="sans-serif-black"/>
+                android:fontFamily="sans-serif"/>
 
         </LinearLayout>
-
 
     </androidx.cardview.widget.CardView>
 
