@@ -35,13 +35,13 @@
             android:id="@+id/signupbtn"
             android:layout_width="0dp"
             android:layout_height="65dp"
-            android:layout_weight="1"
             android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#374151"
             android:text="SIGN UP"
-            android:textStyle="bold"
-            android:textSize="18sp"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#374151"/>
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/signinbtn"
