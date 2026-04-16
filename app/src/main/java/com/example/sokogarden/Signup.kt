@@ -70,7 +70,7 @@ class Signup : AppCompatActivity() {
             }
 
             // API
-            val api = "https://paul-mungah001.alwaysdata.net/api/signup"
+            val api = "https://kbenkamotho.alwaysdata.net/api/signup"
 
             val data = RequestParams()
             data.put("username", usernameText)

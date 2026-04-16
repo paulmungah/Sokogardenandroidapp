@@ -52,7 +52,7 @@ class PaymentActivity : AppCompatActivity() {
         //set click listener on the paynow button
         btnpay.setOnClickListener {
             //specify the api endpoint for making payment
-            val api = "http://127.0.0.1:5000/api/mpesa_payment"
+            val api = "https://kbenkamotho.alwaysdata.net/api/mpesa_payment"
 
 //            create a request params
             val data = RequestParams()
