@@ -30,48 +30,28 @@ class Signin : AppCompatActivity() {
 
 //      On th text view set onclick listener such that when clicked iy navigates u o the signup page
         signupTextView.setOnClickListener {
-            val intent = Intent(applicationContext, Signup :: class.java)
+            val intent = Intent(applicationContext, Signup::class.java)
             startActivity(intent)
         }
 
-//        on click of the button sign in we need to interact with out api endpoint as we pass the two datas require ei email and password
+//        on click of the button sign in we need to interact with  api endpoint as we pass the two datas require ei email and password
         signinButton.setOnClickListener {
 //            specify the api endpoint
-            val api ="https://paul-mungah001.alwaysdata.net/api/signin"
+            val api = "https://paul-mungah001.alwaysdata.net/api/login"
 //            create a request that run that enable us to hold the data inform of a bundle/package
-            val data = RequestParams ()
+            val data = RequestParams()
 
 //            add/append/attach the email and the password
             data.put("email", email.text.toString())
-            data.put("password",password.text.toString())
+            data.put("password", password.text.toString())
 
 //            import the api helper
             val helper = ApiHelper(applicationContext)
 
 //            by use of the function post_login the helper class post your data
-            // 🔥 ONLY navigate after success
-            helper.post(api, data) { success, message ->
+            helper.post_login(api, params = data)
 
-                if (success) {
-                    Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
 
-                    // ⏳ delay before navigating
-                    android.os.Handler().postDelayed({
-
-                        // clear fields
-                        email.text.clear()
-                        password.text.clear()
-
-                        // navigate AFTER message is seen
-                        val intent = Intent(applicationContext, MainActivity::class.java)
-                        startActivity(intent)
-
-                    }, 3000) // 2 seconds delay
-
-                } else {
-                    Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
-                }
-            }
         }
     }
 }

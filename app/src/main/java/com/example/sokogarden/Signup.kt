@@ -70,7 +70,7 @@ class Signup : AppCompatActivity() {
             }
 
             // API
-            val api = "https://slyney2248.alwaysdata.net/api/signup"
+            val api = "https://paul-mungah001.alwaysdata.net/api/signup"
 
             val data = RequestParams()
             data.put("username", usernameText)
@@ -79,32 +79,8 @@ class Signup : AppCompatActivity() {
             data.put("phone", phoneText)
 
             val helper = ApiHelper(applicationContext)
+            helper.post(api,data)
 
-            // 🔥 ONLY navigate after success
-            helper.post(api, data) { success, message ->
-
-                if (success) {
-                    Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
-
-                    // ⏳ delay before navigating
-                    android.os.Handler().postDelayed({
-
-                        // clear fields
-                        username.text.clear()
-                        email.text.clear()
-                        password.text.clear()
-                        phone.text.clear()
-
-                        // navigate AFTER message is seen
-                        val intent = Intent(applicationContext, Signin::class.java)
-                        startActivity(intent)
-
-                    }, 3000) // 2 seconds delay
-
-                } else {
-                    Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
-                }
-            }
         }
     }
 }
