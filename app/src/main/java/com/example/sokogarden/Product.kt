@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.json.JSONArray
-
+ 
 data class Product(
     val product_id: Int,
     val product_name: String,
@@ -16,10 +16,10 @@ data class Product(
     val product_cost: Int,
     val product_photo: String?
 )
-
+ 
 class ProductAdapter(private val productList: List<Product>) :
     RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
-
+ 
     class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val txtName: TextView = itemView.findViewById(R.id.product_name)
         val txtDesc: TextView = itemView.findViewById(R.id.product_description)
@@ -33,7 +33,7 @@ class ProductAdapter(private val productList: List<Product>) :
             .inflate(R.layout.activity_single_item, parent, false)
         return ProductViewHolder(view)
     }
-
+ 
     //Access Views in Single Item XML and Bind Data
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = productList[position]
@@ -41,15 +41,15 @@ class ProductAdapter(private val productList: List<Product>) :
         holder.txtDesc.text = product.product_description ?: "No description"
         holder.txtPrice.text = "Ksh ${product.product_cost}"
         //Change/Replace modcom2 below to your Python Anywhere username
-        val imageUrl = "https://kbenkamotho.alwaysdata.net/static/images/${product.product_photo}"
-
+        val imageUrl = "https://https://malombeswala.alwaysdata.net/api/static/images/${product.product_photo}"
+ 
         //Load image using Glide, Load Faster with Glide
         Glide.with(holder.itemView.context)
             .load(imageUrl )
             .placeholder(R.drawable.ic_launcher_background) // Make sure you have a placeholder image
             .into(holder.imgProduct)
-
-        //Handle Purchase Button Listener
+ 
+                //Handle Purchase Button Listener
 //                holder.btnPurchase.setOnClickListener {
 //                    val context = holder.itemView.context
 //                    val intent = android.content.Intent(context, PaymentActivity::class.java).apply {
@@ -62,9 +62,9 @@ class ProductAdapter(private val productList: List<Product>) :
 //                    context.startActivity(intent)
 //                }
     }
-
+ 
     override fun getItemCount(): Int = productList.size
-    //Return all products Details as a LIST
+   //Return all products Details as a LIST
     companion object {
         fun fromJsonArray(jsonArray: JSONArray): List<Product> {
             val list = mutableListOf<Product>()
