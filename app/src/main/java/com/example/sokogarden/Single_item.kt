@@ -41,7 +41,7 @@ class ProductAdapter(private val productList: List<Product>) :
         holder.txtDesc.text = product.product_description ?: "No description"
         holder.txtPrice.text = "Ksh ${product.product_cost}"
         //Change/Replace modcom2 below to your Python Anywhere username
-        val imageUrl = "https://slyney2248.alwaysdata.net/static/images/${product.product_photo}"
+        val imageUrl = "https://kbenkamotho.alwaysdata.net/static/images/${product.product_photo}"
 
         //Load image using Glide, Load Faster with Glide
         Glide.with(holder.itemView.context)
