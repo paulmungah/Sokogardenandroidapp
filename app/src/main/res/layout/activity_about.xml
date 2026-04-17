@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E3F2FD"
+    tools:context=".About">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us ⚡"
+        android:textStyle="bold"
+        android:textSize="42sp"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:background="#BBDEFB"
+        android:padding="16dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_margin="15dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="#E1F5FE">
+
+            <TextView
+                android:id="@+id/aboutTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome to our Ecommerce application. a simple user friendly platform designed to make online shopping easy and accessible for everyone. Users can easil create account , securely login and browse a wide range of products with description abd product photos. Our seeml checkout process allows customers to pay conveniently by use of Mpesa"
+                android:textColor="#0D47A1"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnListen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="KNOW US ⚡"
+                android:textSize="25sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1565C0"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

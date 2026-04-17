@@ -55,6 +55,19 @@
             android:textColor="#000000"
             android:backgroundTint="#F97316"/>
 
+        <Button
+            android:id="@+id/aboutbtn"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text=" ABOUT"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:backgroundTint="#F97316"/>
+
+
     </LinearLayout>
 
     <!-- STATUS TEXT -->
@@ -95,6 +108,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#111111"
-        tools:listitem="@layout/activity_single_item"/>
+        tools:listitem="@layout/single_item"/>
 
 </LinearLayout>

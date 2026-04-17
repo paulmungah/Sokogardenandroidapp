@@ -3,6 +3,7 @@ package com.example.sokogarden
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -25,15 +26,15 @@ class ProductAdapter(private val productList: List<Product>) :
         val txtDesc: TextView = itemView.findViewById(R.id.product_description)
         val txtPrice: TextView = itemView.findViewById(R.id.product_cost)
         val imgProduct: ImageView = itemView.findViewById(R.id.product_photo)
-//        val btnPurchase: TextView = itemView.findViewById(R.id.purchase)
+//        val btnPurchase: Button = itemView.findViewById(R.id.pay)
     }
     //Access the Layout - Single Item
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.activity_single_item, parent, false)
+            .inflate(R.layout.single_item, parent, false)
         return ProductViewHolder(view)
     }
- 
+
     //Access Views in Single Item XML and Bind Data
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = productList[position]
@@ -41,7 +42,7 @@ class ProductAdapter(private val productList: List<Product>) :
         holder.txtDesc.text = product.product_description ?: "No description"
         holder.txtPrice.text = "Ksh ${product.product_cost}"
         //Change/Replace modcom2 below to your Python Anywhere username
-        val imageUrl = "https://https://malombeswala.alwaysdata.net/api/static/images/${product.product_photo}"
+        val imageUrl = "https://kbenkamotho.alwaysdata.net/static/images/${product.product_photo}"
  
         //Load image using Glide, Load Faster with Glide
         Glide.with(holder.itemView.context)
