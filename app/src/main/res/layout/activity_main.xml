@@ -65,7 +65,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="#000000"
-            android:backgroundTint="#F97316"/>
+            android:backgroundTint="#F97316"
+            android:textAlignment="center"/>
 
 
     </LinearLayout>
